@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/adntin/demo-webpack#readme",
   "dependencies": {
-    "webpack-cli": "3.3.2",
-    "wepack": "0.0.1"
+    "webpack-cli": "3.3.2"
+  },
+  "devDependencies": {
+    "webpack": "4.32.2"
   }
 }
