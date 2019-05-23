@@ -1,0 +1,5 @@
+{
+  "fileheader.tpl": "/*\r\n * @Author: {author}\r\n * @Date: {createTime}\r\n * Copyright © Leedarson. All rights reserved.\r\n */\r\n",
+  "editor.formatOnSave": true,
+  "cSpell.words": ["polyfill"]
+}

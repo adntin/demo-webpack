@@ -1,0 +1,24 @@
+{
+  "name": "demo-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adntin/demo-webpack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adntin/demo-webpack/issues"
+  },
+  "homepage": "https://github.com/adntin/demo-webpack#readme",
+  "dependencies": {
+    "webpack-cli": "3.3.2",
+    "wepack": "0.0.1"
+  }
+}
