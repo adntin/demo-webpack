@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "formulahendry.code-runner",
+    "streetsidesoftware.code-spell-checker",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "donjayamanne.githistory",
+    "eamodio.gitlens",
+    "orta.vscode-jest",
+    "esbenp.prettier-vscode",
+    "mikey.vscode-fileheader"
+  ]
+}
