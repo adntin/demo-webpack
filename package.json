@@ -17,8 +17,8 @@
     "url": "https://github.com/adntin/demo-webpack/issues"
   },
   "homepage": "https://github.com/adntin/demo-webpack#readme",
-  "dependencies": {
-    "webpack-cli": "3.3.2",
-    "wepack": "0.0.1"
+  "devDependencies": {
+    "webpack": "4.32.2",
+    "webpack-cli": "3.3.2"
   }
 }
