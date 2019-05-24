@@ -1,0 +1,15 @@
+@primary-color: blue;
+
+.rounded-corners (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+body {
+  div {
+    border: 1px solid @primary-color;
+    transform: rotate(0.5turn);
+    .rounded-corners(10px);
+  }
+}
