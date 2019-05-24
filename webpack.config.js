@@ -22,11 +22,11 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html', // 输出后的文件名称
       // 压缩html
-      minify: {
-        collapseWhitespace: true, // 折叠空行
-        // removeAttributeQuotes: true, // 移除双引号
-      },
-      // hash: true, // 引用资源添加问号hash
+      // minify: {
+      //   collapseWhitespace: true, // 折叠空行
+      //   // removeAttributeQuotes: true, // 移除双引号, 不建议使用
+      // },
+      // hash: true, // 引用资源添加问号hash, 不建议使用
     }),
   ],
 };
