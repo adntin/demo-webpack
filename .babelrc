@@ -1,0 +1,31 @@
+{
+  // presets 执行顺序, first to last
+  "presets": [
+    // 1. 不推荐, 这种方式会把所有polyfill全部打包, 需要在入口文件 import '@babel/polyfill'
+    // ["@babel/preset-env"]
+    // 2. 推荐, 这种方式会根据模块使用情况选择打包(有使用某种语法则打包相应的兼容方法), 不需要在入口文件 import '@babel/polyfill'
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": 3
+      }
+    ]
+  ],
+  // plugins 执行顺序, last to first
+  "plugins": [
+    // stage 1
+    // 装饰器必须在类属性之前
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    // stage 2
+    // loose: true 使用this赋值, 推荐
+    // loose: false 使用Object.defineProperty赋值
+    ["@babel/plugin-proposal-class-properties", { "loose": false }],
+    // 运行时转换
+    // 1. 动态引入需要的包(支持转换的包才会引入), 比如 @babel/runtime/regenerator
+    // 2. 抽取共公方法, 比如 _classCallCheck
+    // 3. 会根据.browserslistrc生成需要的包(兼容浏览器)
+    // 4. 实例方法的语法不会自动引入, 比如 "foobar".includes("foo")
+    ["@babel/plugin-transform-runtime"]
+  ]
+}
