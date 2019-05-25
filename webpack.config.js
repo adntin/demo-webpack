@@ -1,8 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // 分析打包情况
 
 module.exports = {
-  mode: 'development',
+  mode: 'development', // development, production
+  optimization: {
+    usedExports: true, // mode: development, 开发环境不会导出没有使用的方法
+  },
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
@@ -48,5 +52,6 @@ module.exports = {
       // },
       // hash: true, // 引用资源添加问号hash, 不建议使用
     }),
+    // new BundleAnalyzerPlugin(),
   ],
 };

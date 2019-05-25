@@ -1,31 +1,36 @@
 {
-  // presets 执行顺序, first to last
+  // presets 执行顺序, last to first
   "presets": [
-    // 1. 不推荐, 这种方式会把所有polyfill全部打包, 需要在入口文件 import '@babel/polyfill'
-    // ["@babel/preset-env"]
-    // 2. 推荐, 这种方式会根据模块使用情况选择打包(有使用某种语法则打包相应的兼容方法), 不需要在入口文件 import '@babel/polyfill'
+    // https://babeljs.io/docs/en/babel-preset-env
+    // It is important to note that @babel/preset-env does not support stage-x plugins.
+    // 翻译: 需要注意的是@babel/preset-env 不支持stage-x插件。
+    // By default @babel/preset-env will use browserslist config sources unless either the targets or ignoreBrowserslistConfig options are set.
+    // 翻译: 默认情况下@babel/preset-env 将使用browserslist配置源，除非设置了target 或者ignoreBrowserslistConfig选项。
+    // Sidenote, if no targets are specified, @babel/preset-env will transform all ECMAScript 2015+ code by default.
+    // 翻译: 如果没有具体的targets属性，@babel/preset-env 将默认转换所有ECMAScript 2015+代码。(但是推荐在.browserslistrc中配置)
+    // We don't recommend using preset-env this way because it doesn't take advantage of its ability to target specific browsers.
+    // 翻译: 我们不建议单独使用preset-env，而不配置targets属性, 因为它没有利用其针对特定浏览器的功能。
     [
       "@babel/preset-env",
       {
+        // useBuiltIns选项, 处理 @babel/preset-env 如何引入 @babel/polyfill
+        // false: 不对polyfill做任何操作
+        // "entry": 根据targets选项中设置的浏览器支持版本，将polyfills拆分引入，仅引入浏览器(全部)不支持的polyfill, 一定切记需要在入口引入@babel/polyfill, webpack.config.js 或者 index.js
+        // "usage": 根据targets选项中设置的浏览器支持版本，检测代码中ES6/7/8等的使用情况，仅仅加载代码中用到的polyfill, 不需要引入@babel/polyfill
         "useBuiltIns": "usage",
+        // targets选项, 建议在.browserslistrc中配置
+        // "targets": "last 1 chrome version",
         "corejs": 3
       }
     ]
   ],
-  // plugins 执行顺序, last to first
+  // plugins 执行顺序, first to last
   "plugins": [
-    // stage 1
-    // 装饰器必须在类属性之前
+    // 装饰器, stage 1, 必须在类属性之前
     ["@babel/plugin-proposal-decorators", { "legacy": true }],
-    // stage 2
-    // loose: true 使用this赋值, 推荐
-    // loose: false 使用Object.defineProperty赋值
+    // 类属性, stage 2, loose: true 使用this赋值(推荐), loose: false 使用Object.defineProperty赋值
     ["@babel/plugin-proposal-class-properties", { "loose": false }],
-    // 运行时转换
-    // 1. 动态引入需要的包(支持转换的包才会引入), 比如 @babel/runtime/regenerator
-    // 2. 抽取共公方法, 比如 _classCallCheck
-    // 3. 会根据.browserslistrc生成需要的包(兼容浏览器)
-    // 4. 实例方法的语法不会自动引入, 比如 "foobar".includes("foo")
+    // transform-runtime 插件用于告诉 Babel 引入 runtime 而不是内联 runtime，即将所有的 helpers 函数分离为单独的 runtime 以实现代码复用。比如 _classCallCheck
     ["@babel/plugin-transform-runtime"]
   ]
 }

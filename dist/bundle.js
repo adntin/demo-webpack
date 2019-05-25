@@ -86,51 +86,12 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/@babel/runtime/helpers/applyDecoratedDescriptor.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/applyDecoratedDescriptor.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
-  var desc = {};
-  Object.keys(descriptor).forEach(function (key) {
-    desc[key] = descriptor[key];
-  });
-  desc.enumerable = !!desc.enumerable;
-  desc.configurable = !!desc.configurable;
-
-  if ('value' in desc || desc.initializer) {
-    desc.writable = true;
-  }
-
-  desc = decorators.slice().reverse().reduce(function (desc, decorator) {
-    return decorator(target, property, desc) || desc;
-  }, desc);
-
-  if (context && desc.initializer !== void 0) {
-    desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
-    desc.initializer = undefined;
-  }
-
-  if (desc.initializer === void 0) {
-    Object.defineProperty(target, property, desc);
-    desc = null;
-  }
-
-  return desc;
-}
-
-module.exports = _applyDecoratedDescriptor;
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime/helpers/classCallCheck.js":
 /*!***************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/classCallCheck.js ***!
   \***************************************************************/
 /*! no static exports found */
+/*! exports used: default */
 /***/ (function(module, exports) {
 
 function _classCallCheck(instance, Constructor) {
@@ -143,38 +104,12 @@ module.exports = _classCallCheck;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/createClass.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/createClass.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-module.exports = _createClass;
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime/helpers/defineProperty.js":
 /*!***************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/defineProperty.js ***!
   \***************************************************************/
 /*! no static exports found */
+/*! exports used: default */
 /***/ (function(module, exports) {
 
 function _defineProperty(obj, key, value) {
@@ -201,6 +136,7 @@ module.exports = _defineProperty;
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
   \**********************************************************/
 /*! no static exports found */
+/*! exports used: default */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
@@ -213,6 +149,7 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
   !*** ./node_modules/core-js/internals/add-to-unscopables.js ***!
   \**************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var UNSCOPABLES = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js")('unscopables');
@@ -239,6 +176,7 @@ module.exports = function (key) {
   !*** ./node_modules/core-js/internals/an-object.js ***!
   \*****************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(/*! ../internals/is-object */ "./node_modules/core-js/internals/is-object.js");
@@ -257,6 +195,7 @@ module.exports = function (it) {
   !*** ./node_modules/core-js/internals/array-includes.js ***!
   \**********************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ "./node_modules/core-js/internals/to-indexed-object.js");
@@ -295,6 +234,7 @@ module.exports = function (IS_INCLUDES) {
   !*** ./node_modules/core-js/internals/classof-raw.js ***!
   \*******************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -311,6 +251,7 @@ module.exports = function (it) {
   !*** ./node_modules/core-js/internals/copy-constructor-properties.js ***!
   \***********************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var has = __webpack_require__(/*! ../internals/has */ "./node_modules/core-js/internals/has.js");
@@ -336,6 +277,7 @@ module.exports = function (target, source) {
   !*** ./node_modules/core-js/internals/correct-is-regexp-logic.js ***!
   \*******************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var MATCH = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js")('match');
@@ -360,6 +302,7 @@ module.exports = function (METHOD_NAME) {
   !*** ./node_modules/core-js/internals/create-property-descriptor.js ***!
   \**********************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports) {
 
 module.exports = function (bitmap, value) {
@@ -379,6 +322,7 @@ module.exports = function (bitmap, value) {
   !*** ./node_modules/core-js/internals/descriptors.js ***!
   \*******************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Thank's IE8 for his funny defineProperty
@@ -394,6 +338,7 @@ module.exports = !__webpack_require__(/*! ../internals/fails */ "./node_modules/
   !*** ./node_modules/core-js/internals/document-create-element.js ***!
   \*******************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(/*! ../internals/is-object */ "./node_modules/core-js/internals/is-object.js");
@@ -413,6 +358,7 @@ module.exports = function (it) {
   !*** ./node_modules/core-js/internals/enum-bug-keys.js ***!
   \*********************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports) {
 
 // IE8- don't enum bug keys
@@ -434,6 +380,7 @@ module.exports = [
   !*** ./node_modules/core-js/internals/export.js ***!
   \**************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
@@ -499,6 +446,7 @@ module.exports = function (options, source) {
   !*** ./node_modules/core-js/internals/fails.js ***!
   \*************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports) {
 
 module.exports = function (exec) {
@@ -517,6 +465,7 @@ module.exports = function (exec) {
   !*** ./node_modules/core-js/internals/function-to-string.js ***!
   \**************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! ../internals/shared */ "./node_modules/core-js/internals/shared.js")('native-function-to-string', Function.toString);
@@ -529,6 +478,7 @@ module.exports = __webpack_require__(/*! ../internals/shared */ "./node_modules/
   !*** ./node_modules/core-js/internals/global.js ***!
   \**************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var O = 'object';
@@ -555,6 +505,7 @@ module.exports =
   !*** ./node_modules/core-js/internals/has.js ***!
   \***********************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports) {
 
 var hasOwnProperty = {}.hasOwnProperty;
@@ -571,6 +522,7 @@ module.exports = function (it, key) {
   !*** ./node_modules/core-js/internals/hidden-keys.js ***!
   \*******************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports) {
 
 module.exports = {};
@@ -583,6 +535,7 @@ module.exports = {};
   !*** ./node_modules/core-js/internals/hide.js ***!
   \************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
@@ -604,6 +557,7 @@ module.exports = DESCRIPTORS ? function (object, key, value) {
   !*** ./node_modules/core-js/internals/html.js ***!
   \************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var document = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js").document;
@@ -618,6 +572,7 @@ module.exports = document && document.documentElement;
   !*** ./node_modules/core-js/internals/ie8-dom-define.js ***!
   \**********************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
@@ -639,6 +594,7 @@ module.exports = !DESCRIPTORS && !fails(function () {
   !*** ./node_modules/core-js/internals/indexed-object.js ***!
   \**********************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
@@ -662,6 +618,7 @@ module.exports = fails(function () {
   !*** ./node_modules/core-js/internals/internal-state.js ***!
   \**********************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var NATIVE_WEAK_MAP = __webpack_require__(/*! ../internals/native-weak-map */ "./node_modules/core-js/internals/native-weak-map.js");
@@ -732,6 +689,7 @@ module.exports = {
   !*** ./node_modules/core-js/internals/is-forced.js ***!
   \*****************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
@@ -763,6 +721,7 @@ module.exports = isForced;
   !*** ./node_modules/core-js/internals/is-object.js ***!
   \*****************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports) {
 
 module.exports = function (it) {
@@ -777,6 +736,7 @@ module.exports = function (it) {
   !*** ./node_modules/core-js/internals/is-pure.js ***!
   \***************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports) {
 
 module.exports = false;
@@ -789,6 +749,7 @@ module.exports = false;
   !*** ./node_modules/core-js/internals/is-regexp.js ***!
   \*****************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(/*! ../internals/is-object */ "./node_modules/core-js/internals/is-object.js");
@@ -810,6 +771,7 @@ module.exports = function (it) {
   !*** ./node_modules/core-js/internals/native-symbol.js ***!
   \*********************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
@@ -828,6 +790,7 @@ module.exports = !!Object.getOwnPropertySymbols && !fails(function () {
   !*** ./node_modules/core-js/internals/native-weak-map.js ***!
   \***********************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nativeFunctionToString = __webpack_require__(/*! ../internals/function-to-string */ "./node_modules/core-js/internals/function-to-string.js");
@@ -843,6 +806,7 @@ module.exports = typeof WeakMap === 'function' && /native code/.test(nativeFunct
   !*** ./node_modules/core-js/internals/object-create.js ***!
   \*********************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
@@ -900,6 +864,7 @@ hiddenKeys[IE_PROTO] = true;
   !*** ./node_modules/core-js/internals/object-define-properties.js ***!
   \********************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
@@ -925,6 +890,7 @@ module.exports = DESCRIPTORS ? Object.defineProperties : function defineProperti
   !*** ./node_modules/core-js/internals/object-define-property.js ***!
   \******************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
@@ -953,6 +919,7 @@ exports.f = DESCRIPTORS ? nativeDefineProperty : function defineProperty(O, P, A
   !*** ./node_modules/core-js/internals/object-get-own-property-descriptor.js ***!
   \******************************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
@@ -981,6 +948,7 @@ exports.f = DESCRIPTORS ? nativeGetOwnPropertyDescriptor : function getOwnProper
   !*** ./node_modules/core-js/internals/object-get-own-property-names.js ***!
   \*************************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
@@ -999,6 +967,7 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
   !*** ./node_modules/core-js/internals/object-get-own-property-symbols.js ***!
   \***************************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports) {
 
 exports.f = Object.getOwnPropertySymbols;
@@ -1011,6 +980,7 @@ exports.f = Object.getOwnPropertySymbols;
   !*** ./node_modules/core-js/internals/object-keys-internal.js ***!
   \****************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var has = __webpack_require__(/*! ../internals/has */ "./node_modules/core-js/internals/has.js");
@@ -1039,6 +1009,7 @@ module.exports = function (object, names) {
   !*** ./node_modules/core-js/internals/object-keys.js ***!
   \*******************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
@@ -1057,6 +1028,7 @@ module.exports = Object.keys || function keys(O) {
   !*** ./node_modules/core-js/internals/object-property-is-enumerable.js ***!
   \*************************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1080,6 +1052,7 @@ exports.f = NASHORN_BUG ? function propertyIsEnumerable(V) {
   !*** ./node_modules/core-js/internals/own-keys.js ***!
   \****************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getOwnPropertyNamesModule = __webpack_require__(/*! ../internals/object-get-own-property-names */ "./node_modules/core-js/internals/object-get-own-property-names.js");
@@ -1102,6 +1075,7 @@ module.exports = Reflect && Reflect.ownKeys || function ownKeys(it) {
   !*** ./node_modules/core-js/internals/redefine.js ***!
   \****************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
@@ -1151,6 +1125,7 @@ shared('inspectSource', function (it) {
   !*** ./node_modules/core-js/internals/require-object-coercible.js ***!
   \********************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports) {
 
 // `RequireObjectCoercible` abstract operation
@@ -1168,6 +1143,7 @@ module.exports = function (it) {
   !*** ./node_modules/core-js/internals/set-global.js ***!
   \******************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
@@ -1189,6 +1165,7 @@ module.exports = function (key, value) {
   !*** ./node_modules/core-js/internals/shared-key.js ***!
   \******************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var shared = __webpack_require__(/*! ../internals/shared */ "./node_modules/core-js/internals/shared.js")('keys');
@@ -1206,6 +1183,7 @@ module.exports = function (key) {
   !*** ./node_modules/core-js/internals/shared.js ***!
   \**************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
@@ -1230,6 +1208,7 @@ var store = global[SHARED] || setGlobal(SHARED, {});
   !*** ./node_modules/core-js/internals/to-absolute-index.js ***!
   \*************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var toInteger = __webpack_require__(/*! ../internals/to-integer */ "./node_modules/core-js/internals/to-integer.js");
@@ -1252,6 +1231,7 @@ module.exports = function (index, length) {
   !*** ./node_modules/core-js/internals/to-indexed-object.js ***!
   \*************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 // toObject with fallback for non-array-like ES3 strings
@@ -1270,6 +1250,7 @@ module.exports = function (it) {
   !*** ./node_modules/core-js/internals/to-integer.js ***!
   \******************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports) {
 
 var ceil = Math.ceil;
@@ -1289,6 +1270,7 @@ module.exports = function (argument) {
   !*** ./node_modules/core-js/internals/to-length.js ***!
   \*****************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var toInteger = __webpack_require__(/*! ../internals/to-integer */ "./node_modules/core-js/internals/to-integer.js");
@@ -1308,6 +1290,7 @@ module.exports = function (argument) {
   !*** ./node_modules/core-js/internals/to-primitive.js ***!
   \********************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
@@ -1331,6 +1314,7 @@ module.exports = function (it, S) {
   !*** ./node_modules/core-js/internals/uid.js ***!
   \***********************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports) {
 
 var id = 0;
@@ -1348,6 +1332,7 @@ module.exports = function (key) {
   !*** ./node_modules/core-js/internals/validate-string-method-arguments.js ***!
   \****************************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 // helper for String#{startsWith, endsWith, includes}
@@ -1368,6 +1353,7 @@ module.exports = function (that, searchString, NAME) {
   !*** ./node_modules/core-js/internals/well-known-symbol.js ***!
   \*************************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 var store = __webpack_require__(/*! ../internals/shared */ "./node_modules/core-js/internals/shared.js")('wks');
@@ -1408,62 +1394,6 @@ __webpack_require__(/*! ../internals/add-to-unscopables */ "./node_modules/core-
 
 /***/ }),
 
-/***/ "./node_modules/core-js/modules/es.function.name.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/core-js/modules/es.function.name.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
-var defineProperty = __webpack_require__(/*! ../internals/object-define-property */ "./node_modules/core-js/internals/object-define-property.js").f;
-var FunctionPrototype = Function.prototype;
-var FunctionPrototypeToString = FunctionPrototype.toString;
-var nameRE = /^\s*function ([^ (]*)/;
-var NAME = 'name';
-
-// Function instances `.name` property
-// https://tc39.github.io/ecma262/#sec-function-instances-name
-if (DESCRIPTORS && !(NAME in FunctionPrototype)) {
-  defineProperty(FunctionPrototype, NAME, {
-    configurable: true,
-    get: function () {
-      try {
-        return FunctionPrototypeToString.call(this).match(nameRE)[1];
-      } catch (error) {
-        return '';
-      }
-    }
-  });
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/modules/es.object.get-own-property-descriptor.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/core-js/modules/es.object.get-own-property-descriptor.js ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ "./node_modules/core-js/internals/to-indexed-object.js");
-var nativeGetOwnPropertyDescriptor = __webpack_require__(/*! ../internals/object-get-own-property-descriptor */ "./node_modules/core-js/internals/object-get-own-property-descriptor.js").f;
-var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
-var FAILS_ON_PRIMITIVES = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js")(function () { nativeGetOwnPropertyDescriptor(1); });
-var FORCED = !DESCRIPTORS || FAILS_ON_PRIMITIVES;
-
-// `Object.getOwnPropertyDescriptor` method
-// https://tc39.github.io/ecma262/#sec-object.getownpropertydescriptor
-__webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js")({ target: 'Object', stat: true, forced: FORCED, sham: !DESCRIPTORS }, {
-  getOwnPropertyDescriptor: function getOwnPropertyDescriptor(it, key) {
-    return nativeGetOwnPropertyDescriptor(toIndexedObject(it), key);
-  }
-});
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/modules/es.string.includes.js":
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es.string.includes.js ***!
@@ -1495,6 +1425,7 @@ __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -2232,6 +2163,7 @@ try {
   !*** (webpack)/buildin/global.js ***!
   \***********************************/
 /*! no static exports found */
+/*! all exports used */
 /***/ (function(module, exports) {
 
 var g;
@@ -2263,31 +2195,25 @@ module.exports = g;
   !*** ./src/index.js ***!
   \**********************/
 /*! no exports provided */
+/*! all exports used */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.includes */ "./node_modules/core-js/modules/es.array.includes.js");
 /* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.function.name */ "./node_modules/core-js/modules/es.function.name.js");
-/* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptor */ "./node_modules/core-js/modules/es.object.get-own-property-descriptor.js");
-/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
-/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _babel_runtime_helpers_applyDecoratedDescriptor__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @babel/runtime/helpers/applyDecoratedDescriptor */ "./node_modules/@babel/runtime/helpers/applyDecoratedDescriptor.js");
-/* harmony import */ var _babel_runtime_helpers_applyDecoratedDescriptor__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_applyDecoratedDescriptor__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _one__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./one */ "./src/one.js");
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
+/* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _one__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./one */ "./src/one.js");
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./math.js */ "./src/math.js");
 
 
 
@@ -2295,92 +2221,296 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
-var _dec, _dec2, _dec3, _class, _class2, _temp;
+var _computed_properties;
 
 var _marked =
 /*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.mark(gen);
+_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(gen);
 
-console.log('hello world!'); // --------------------------------------------------
+// import '@babel/polyfill'; // 不需要显式导入, `useBuiltIns: 'usage'`会根据代码使用情况动态引入
+// 打包警告: When setting `useBuiltIns: 'usage'`, polyfills are automatically imported when needed. Please remove the direct import of `core-js` or use `useBuiltIns: 'entry'` instead.
+// 翻译: 当设置 useBuiltIns: 'usage' 时，根据需要自动导入polyfill。请删除“core-js”的直接导入，或者使用 useBuiltIns: 'entry' 代替。
+// @babel/preset-env
+// 官网: https://babeljs.io/docs/en/babel-preset-env
+// 翻译: @babel/preset-env是一个智能预置，允许您使用最新的JavaScript，而不需要对目标环境所需的语法转换(以及可选的浏览器polyfill)进行微管理。这不仅使您的生活更轻松，而且JavaScript包也更小!
+//      .babelrc中通过`targets`选项来设置浏览器支持的版本
+//      .browserslistrc设置浏览器支持的版本(推荐)
+// @babel/polyfill
+// 官网: https://www.babeljs.cn/docs/babel-polyfill
+// 翻译: babel 包含一个定制化的 regenerator runtime 和 core-js。
+//      这将模拟整个 ES2015+ 的执行环境（不包含 < Stage 4 提案），并将用于应用程序而不是库/工具。（该 polyfill 将在使用 babel-node 时自动引入）
+//      这意味着你可以使用新的内置插件，像 Promise 或 WeakMap，静态方法像 Array.from 或 Object.assign，实例方法像 Array.prototype.includes，和 generator 函数（提供给你 regenerator 插件）。本 polyfill 为了实现以上目标，向 全局作用域 和像 String 这样的 原生原型 上添加了这些方法。
+// @babel/plugin-transform-runtime
+// 官网: https://babeljs.io/docs/en/babel-plugin-transform-runtime
+// 翻译: 一个用于开启复用 babel 注入的 helper 帮助函数（即用于辅助 babel 转译代码的函数）的插件。即，处于多个文件中的相同的 helper 帮助函数，将被提取到 babel runtime 中以实现代码复用，减小打包体积。
+console.log('hello world!'); // 查找: 在 bundle.js 中根据 ./src/index.js 查找需要引入的 core-js
+// --------------------------------------------------
+// ES2015 === ES6
 // yarn add -D babel-loader @babel/core @babel/preset-env
 // 如果没有用babel-loader处理, 原样输出
+// 1. arrow-functions
 
-var fn = function fn() {
-  console.log('arrow function');
+var arrow_function = function arrow_function() {
+  return 'arrow-function';
 };
 
-fn(); // --------------------------------------------------
-// yarn add -D @babel/plugin-proposal-class-properties
-// yarn add -D @babel/plugin-proposal-decorators
+console.log('ES2015', 'arrow-functions', arrow_function()); // 2. block-scoped-functions
 
-var // 类装饰器, stage 1
-Person = (_dec = testable(true), _dec2 = enumerable(false), _dec3 = enumerable(true), _dec(_class = (_class2 = (_temp =
-/*#__PURE__*/
-function () {
-  function Person(name, age) {
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_6___default()(this, Person);
+{
+  var _name = function _name(n) {
+    return n;
+  };
+}
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(this, "legs", 2);
+try {
+  console.log('ES2015', 'block-scoped-functions', name('Devin'));
+} catch (e) {
+  console.log('ES2015', 'block-scoped-functions', e);
+} // 3. block-scoping
 
-    this.name = name;
-    this.age = age;
+
+{
+  var _a = '1';
+}
+
+try {
+  console.log('ES2015', 'block-scoping', a);
+} catch (e) {
+  console.log('ES2015', 'block-scoping', e);
+} // // 4. classes
+// // core-js/modules/es.function.name.js
+// class Student {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   logger() {
+//     return 'Hello ' + this.name;
+//   }
+// }
+// const student = new Student('Devin');
+// console.log('ES2015', 'classes', student.logger());
+// 5. computed-properties
+
+
+var foo = 'foo';
+var bar = 'bar';
+var computed_properties = (_computed_properties = {}, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5___default()(_computed_properties, 'x' + foo, 'heh'), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5___default()(_computed_properties, 'y' + bar, 'noo'), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5___default()(_computed_properties, "foo", 'foo'), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5___default()(_computed_properties, "bar", 'bar'), _computed_properties);
+console.log('ES2015', 'computed-properties', computed_properties); // // 6. destructuring
+// // core-js/modules/es.array.slice.js
+// const object_destructuring = { x: 1, y: 2 };
+// let { x, y } = object_destructuring;
+// console.log('ES2015', 'destructuring(object)', x, y);
+// const array_destructuring = [1, 2, 3, 4, 5];
+// let [a, b, ...rest] = array_destructuring;
+// console.log('ES2015', 'destructuring(array)', a, b, rest);
+// 7. duplicate-keys
+
+var objDuplicateKeys1 = _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5___default()({
+  a: 5
+}, "a", 6);
+
+var objDuplicateKeys2 = _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5___default()({
+  get a() {},
+
+  set a(x) {}
+
+}, "a", 3);
+
+console.log('ES2015', 'duplicate-keys', objDuplicateKeys1, objDuplicateKeys2); // 8. for-of
+
+var arr = [1, 2, 3];
+var result = [];
+
+for (var _i = 0, _arr = arr; _i < _arr.length; _i++) {
+  var i = _arr[_i];
+  result.push(i);
+}
+
+console.log('ES2015', 'for-of', result); // 9. function-name
+
+var num = function num(x) {
+  return x;
+};
+
+console.log('ES2015', 'function-name', num(1)); // 10. instanceof
+
+var Animal = function Animal() {
+  _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_4___default()(this, Animal);
+};
+
+var isInstanceof = new Animal() instanceof Animal;
+console.log('ES2015', 'instanceof', isInstanceof); // 11. literals
+
+var binary_integer_literal = 3; // binary integer literal
+
+var octal_integer_literal = 7; // octal integer literal
+
+var unicode_string_literals = "Hello\n\t!"; // unicode string literals, newline and tab
+
+console.log('ES2015', 'literals', binary_integer_literal, octal_integer_literal, unicode_string_literals); // 12. new-target
+
+function Foo() {
+  return this instanceof Foo ? this.constructor : void 0;
+}
+
+var str1 = Foo(); // => undefined
+
+var str2 = new Foo(); // => Foo
+
+console.log('ES2015', 'new-target', str1, str2); // 13. object-super
+// 14. parameters
+
+function test() {
+  var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'hello';
+
+  var _ref = arguments.length > 1 ? arguments[1] : undefined,
+      a = _ref.a,
+      b = _ref.b;
+
+  for (var _len = arguments.length, args = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+    args[_key - 2] = arguments[_key];
   }
 
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_7___default()(Person, [{
-    key: "getAge",
-    // 类属性, stage 2
-    value: function getAge() {
-      return this.age;
-    }
-  }, {
-    key: "getName",
-    value: function getName() {
-      return this.name;
-    }
-  }]);
-
-  return Person;
-}(), _temp), (_babel_runtime_helpers_applyDecoratedDescriptor__WEBPACK_IMPORTED_MODULE_9___default()(_class2.prototype, "getAge", [_dec2], Object.getOwnPropertyDescriptor(_class2.prototype, "getAge"), _class2.prototype), _babel_runtime_helpers_applyDecoratedDescriptor__WEBPACK_IMPORTED_MODULE_9___default()(_class2.prototype, "getName", [_dec3], Object.getOwnPropertyDescriptor(_class2.prototype, "getName"), _class2.prototype)), _class2)) || _class);
-
-function testable(value) {
-  return function decorator(target) {
-    target.testable = value;
-  };
+  console.log('ES2015', 'parameters', x, a, b, args);
 }
 
-function enumerable(value) {
-  return function (target, key, descriptor) {
-    descriptor.enumerable = value;
-    return descriptor;
-  };
-}
+test(undefined, {
+  a: 1,
+  b: 2
+}, 3, 4, 5); // 15. shorthand-properties
 
-var person = new Person('web', 20);
-console.log('person.legs', person.legs);
-console.log('Person.testable', Person.testable); // for...in 包括原型上可枚举属性或方法
+var shorthand_properties = 1;
+var obj = {
+  shorthand_properties: shorthand_properties
+};
+console.log('ES2015', 'shorthand-properties', obj); // // 16. spread
+// // core-js/modules/es.array.concat.js
+// var arr1 = ['a', 'b', 'c'];
+// var arr2 = [...arr1, 'foo'];
+// console.log('ES2015', 'spread', arr2);
+// // 17. sticky-regex
+// core-js/modules/es.regexp.constructor.js
+// core-js/modules/es.regexp.to-string.js
+// const sticky_regex = /o+/y;
+// console.log('ES2015', 'sticky-regex', sticky_regex);
+// 18. template-literals
 
-for (var key in person) {
-  console.log('person instance key:', key);
-} // for (const key in person.__proto__)
-// for (const key in Person.prototype) {
-//   console.log('Person prototype key:', key);
+var name = 123;
+console.log('ES2015', 'template-literals', "foo".concat(name)); // // 19. typeof-symbol
+// // core-js/modules/es.symbol.js
+// // core-js/modules/es.symbol.description.js
+// // core-js/modules/es.symbol.iterator.js
+// // core-js/modules/es.array.iterator.js
+// // core-js/modules/es.object.to-string.js
+// // core-js/modules/es.string.iterator.js
+// // core-js/modules/web.dom-collections.iterator.js
+// console.log('ES2015', 'typeof-symbol', typeof Symbol() === 'symbol');
+// // 20. unicode-regex
+// // core-js/modules/es.string.match.js
+// var string = 'foo💩bar';
+// var match = string.match(/foo(.)bar/u);
+// console.log('ES2015', 'unicode-regex', match);
+// // --------------------------------------------------
+// // ES2016 === ES7
+// 1. exponentiation-operator
+// babel-loader 可以直接转换, 不需要core-js
+
+var value = Math.pow(10, 2);
+console.log('ES2016', 'exponentiation-operator', value); // // --------------------------------------------------
+// // ES2017 === ES8
+// 1. async-to-generator
+// core-js/modules/es.promise.js
+// let fetchData = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve('async-to-generator');
+//     }, 3000);
+//   });
+// };
+// async function getData() {
+//   const result = await fetchData();
+//   return result;
 // }
+// getData().then(result => {
+//   console.log('ES2017', 'async-to-generator', result);
+// });
 // --------------------------------------------------
-// 会生成相同代码, _classCallCheck
+// ES2018 === ES9
+// 1. async-generator-functions
+// 2. dotall-regex
+// 3. named-capturing-groups-regex
+// 4. object-rest-spread
+// 5. optional-catch-binding
+// 6. unicode-property-regex
+// --------------------------------------------------
+// Experimental
+// 需要在.babelrc中添加插件
+// 1. 类属性
+// yarn add -D @babel/plugin-proposal-class-properties
+// core-js/modules/es.function.name.js
+// 2. 装饰器
+// yarn add -D @babel/plugin-proposal-decorators
+// core-js/modules/es.array.slice.js
+// core-js/modules/es.function.name.js
+// core-js/modules/es.object.get-own-property-descriptor.js
+// core-js/modules/es.object.keys.js
+// core-js/modules/web.dom-collections.for-each.js
+// @testable(true) // 类装饰器, stage 1
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//   legs = 2; // 类属性, stage 2
+//   @enumerable(false) // 类方法装饰器, stage 1
+//   getAge() {
+//     return this.age;
+//   }
+//   @enumerable(true) // 类方法装饰器, stage 1
+//   getName() {
+//     return this.name;
+//   }
+// }
+// function testable(value) {
+//   return function decorator(target) {
+//     target.testable = value;
+//   };
+// }
+// function enumerable(value) {
+//   return function(target, key, descriptor) {
+//     descriptor.enumerable = value;
+//     return descriptor;
+//   };
+// }
+// const person = new Person('web', 20);
+// console.log('person.legs', person.legs);
+// console.log('Person.testable', Person.testable);
+// // for...in 包括原型上可枚举属性或方法
+// for (const key in person) {
+//   console.log('person instance key:', key);
+// }
+// // for (const key in person.__proto__)
+// // for (const key in Person.prototype) {
+// //   console.log('Person prototype key:', key);
+// // }
+// // --------------------------------------------------
+// // 未安装包时, 如果index.js有类的语法, one.js有类的语法, 会生成重复代码"_classCallCheck"
+// // 开发需要 @babel/plugin-transform-runtime
+// // 生产需要 @babel/runtime
+// // 如果在.babelrc添加插件, 那么会共用代码"_classCallCheck"
+// // @babel/runtime/helpers/classCallCheck.js
+// // @babel/runtime/helpers/defineProperty.js
 
-
- // --------------------------------------------------
-// 未安装包时, 会添加regeneratorRuntime方法, 不会自动引入内置api
-// 开发需要 @babel/plugin-transform-runtime
-// 生产需要 @babel/runtime
-// 如果有用到generator语法, 且.browserlistrc文件中设置为非现代浏览器, 则动态引入 @babel/runtime/regenerator/index.js
+ // // --------------------------------------------------
+// // 未安装包时, 会添加 regeneratorRuntime 方法, 不会自动引入内置api
+// // 开发需要 @babel/plugin-transform-runtime
+// // 生产需要 @babel/runtime
+// // 如果在.babelrc添加插件, 且.browserlistrc文件中设置为非现代浏览器, 则动态引入如下模块
+// // @babel/runtime/regenerator/index.js
+// // regenerator-runtime/runtime.js
 
 function gen() {
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.wrap(function gen$(_context) {
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function gen$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
@@ -2395,18 +2525,52 @@ function gen() {
   }, _marked);
 }
 
-console.log(gen().next()); // --------------------------------------------------
-// @babel/runtime 不会对实例方法添加兼容, 比如: "foobar".includes("foo")
-// yarn add @babel/polyfill
-// 一定要在.babelrc文件中设置"useBuiltIns": "usage", 因为它可以按需引入兼容方法, 入口文件不需要 import '@babel/polyfill';
-// 如果未设置"useBuiltIns": "usage", 则会把全部兼容方法打包到入口文件
+console.log(gen().next()); // // --------------------------------------------------
+// // @babel/runtime 不会对实例方法添加兼容, 比如: "foobar".includes("foo")
+// // yarn add @babel/polyfill
+// // 一定要在.babelrc文件中设置"useBuiltIns": "usage", 因为它可以按需引入兼容方法, 入口文件不需要 import '@babel/polyfill';
+// // 如果未设置"useBuiltIns": "usage", 则会把全部兼容方法打包到入口文件
+// // core-js/modules/es.string.includes.js
+// // core-js/modules/es.array.includes.js
 // core-js/modules/es.string.includes.js
 
 var includes = 'foobar'.includes('foo');
 console.log('includes:', includes); // core-js/modules/es.array.includes.js
 
 var includes2 = [1, 2, 3].includes(1);
-console.log('includes2:', includes2);
+console.log('includes2:', includes2); // --------------------------------------------------
+// tree shaking
+// lodash
+// import _ from 'lodash'; // 这种方式不支持树摇
+// _.groupBy(['lin', 'bin', 'devin'], 'length');
+// // => { '3': ['lin', 'bin'], '5': ['devin'] }
+// import { groupBy } from 'lodash'; // 这种方式不支持树摇
+// import groupBy from 'lodash/groupBy'; // 这种方式支持树摇
+// groupBy(['lin', 'bin', 'devin'], 'length');
+// => { '3': ['lin', 'bin'], '5': ['devin'] }
+
+
+console.log('tree shaking', 'math.cube', Object(_math_js__WEBPACK_IMPORTED_MODULE_7__[/* cube */ "a"])(3));
+
+/***/ }),
+
+/***/ "./src/math.js":
+/*!*********************!*\
+  !*** ./src/math.js ***!
+  \*********************/
+/*! exports provided: square, cube */
+/*! exports used: cube */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export square */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return cube; });
+function square(x) {
+  return 'square: ' + x * x;
+}
+function cube(x) {
+  return 'cube: ' + x * x * x;
+}
 
 /***/ }),
 
@@ -2418,14 +2582,25 @@ console.log('includes2:', includes2);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./math.js */ "./src/math.js");
 
 
 var One = function One() {
   _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, One);
-};
+}; // lodash
+// import _ from 'lodash'; // 这种方式不支持树摇
+// _.groupBy(['lin', 'bin', 'devin'], 'length');
+// // => { '3': ['lin', 'bin'], '5': ['devin'] }
+// // import { groupBy } from 'lodash'; // 这种方式不支持树摇
+// import groupBy from 'lodash/groupBy'; // 这种方式支持树摇
+// groupBy(['lin', 'bin', 'devin'], 'length');
+// // => { '3': ['lin', 'bin'], '5': ['devin'] }
+
+
+
+console.log('tree shaking', 'math.cube', Object(_math_js__WEBPACK_IMPORTED_MODULE_1__[/* cube */ "a"])(3));
 
 /***/ })
 
