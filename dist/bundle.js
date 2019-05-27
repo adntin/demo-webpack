@@ -86,14 +86,26 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/google.png":
+/*!************************!*\
+  !*** ./src/google.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:0)\\nYou may need an appropriate loader to handle this file type.\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack:///./src/google.png?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("console.log('hello world!');\n\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _google_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./google.png */ \"./src/google.png\");\n/* harmony import */ var _google_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_google_png__WEBPACK_IMPORTED_MODULE_0__);\nconsole.log('hello world!');\n\n\n\nconst image = new Image();\nimage.src = _google_png__WEBPACK_IMPORTED_MODULE_0___default.a;\ndocument.body.appendChild(image);\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
